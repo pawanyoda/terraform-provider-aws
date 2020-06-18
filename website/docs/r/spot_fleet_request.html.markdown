@@ -138,13 +138,13 @@ resource "aws_spot_fleet_request" "foo" {
       version = "${aws_launch_template.foo.latest_version}"
     }
     overrides {
-      subnet_id = "${data.aws_subnets.example.ids[0]}"
+      subnet_id = "${data.aws_subnet_ids.example.ids[0]}"
     }
     overrides {
-      subnet_id = "${data.aws_subnets.example.ids[1]}"
+      subnet_id = "${data.aws_subnet_ids.example.ids[1]}"
     }
     overrides {
-      subnet_id = "${data.aws_subnets.example.ids[2]}"
+      subnet_id = "${data.aws_subnet_ids.example.ids[2]}"
     }
   }
 
